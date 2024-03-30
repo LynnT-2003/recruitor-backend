@@ -17,7 +17,7 @@ const modelSchema = new mongoose.Schema({
     required: true,
   },
   lineId: {
-    type: Number,
+    type: String,
     required: true,
   },
   profilePictureUrl: {
@@ -27,6 +27,7 @@ const modelSchema = new mongoose.Schema({
 });
 
 const Model =
-  mongoose.models.UserModel || mongoose.model("UserModel", modelSchema);
+  mongoose.models.ApplicantModel ||
+  mongoose.model("ApplicantModel", modelSchema);
 
 export default Model;
